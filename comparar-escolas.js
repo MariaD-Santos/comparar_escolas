@@ -1,4 +1,21 @@
 
+/* SUGESTÃO DE LÓGICA PARA O DESENVOLVIMENTO */
+
+// elementos classe A
+const cidadeA = document.querySelector(".unidadeA__cidade");
+const codigoA = document.querySelector(".unidadeA__codigo");
+const anoA = document.querySelector(".unidadeA__ano");
+const cursosA = document.querySelector(".unidadeA__cursos");
+const mensagemUnidadeA = document.querySelector("unidadeA__mensagem");
+const botaoInstanciarA = document.querySelector("unidade__botao unidadeA__instanciar")
+
+// elementos classe B
+const cidadeB = document.querySelector(".unidadeB__cidade");
+const codigoB = document.querySelector(".unidadeB__codigo");
+const anoB = document.querySelector(".unidadeB__ano");
+const cursosB = document.querySelector(".unidadeB__cursos");
+const mensagemUnidadeB = document.querySelector("unidadeB__mensagem")
+const botaoInstanciarB = document.querySelector("unidade__botao unidadeB__instanciar")
 
 /* 🚨NÃO ALTERAR A CLASSE 🚨 */
 
@@ -24,54 +41,31 @@ class Senai {
 
 /* 🚨NÃO ALTERAR A CLASSE 🚨 */
 
+/* ===== INSTANCIAR ESCOLA A ===== */
 
-
-/* SUGESTÃO DE LÓGICA PARA O DESENVOLVIMENTO */
-
-
+const unidadeA = new Senai(codigoA.value, cidadeA.value, anoA.value, cursosA.value)
+function mostrarMensagemA(mensagem) {
+  mensagemUnidadeA.textContent = mensagem;
+};
 /* ===== OBTER ELEMENTOS ===== */
-
-const cidadeA = document.querySelector(".unidadeA__cidade");
-const codigoA = document.querySelector(".unidadeA__codigo");
-const anoA = document.querySelector(".unidadeA__ano");
-const cursosA = document.querySelector(".unidadeA__cursos");
-
-const cidadeB = document.querySelector(".unidadeB__cidade");
-const codigoB = document.querySelector(".unidadeB__codigo");
-const anoB = document.querySelector(".unidadeB__ano");
-const cursosB = document.querySelector(".unidadeB__cursos");
-
-const mensagem_unidades = document.querySelector("unidadeB__mensagem, unidadeA__mensagem");
-const botoes = document.querySelectorAll("")
-
 
 
 /* ===== FUNÇÃO DE VALIDAÇÃO ===== */
 
 
-
-/* ===== INSTANCIAR ESCOLA A ===== */
-
-const unidadeA = new Senai(codigoA, cidadeA, anoA, cursosA)
-function mostrarMensagem(mensagem) {
-  mensagem_unidades.textContent = mensagem;
-};
-
 /* ===== INSTANCIAR ESCOLA B ===== */
 
-const unidadeB = new Senai(codigoB, cidadeB, anoB, cursosB)
+const unidadeB = new Senai(codigoB.value, cidadeB.value, anoB.value, cursosB.value)
+function mostrarMensagemB(mensagem) {
+  mensagemUnidadeB.textContent = mensagem;
+};
 
-
-
+botaoInstanciarB.addEventListener('click', () =>{
+    
+})
 /* ===== ABRIR ESCOLA ===== */
 
-unidadeA.abrirEscola();
-unidadeB.abrirEscola();
-
 /* ===== FECHAR ESCOLA ===== */
-
-unidadeA.fecharEscolar();
-unidadeB.fecharEscola();
 
 /* ===== RELATÓRIO DE COMPARAÇÃO ===== */
 
