@@ -31,15 +31,19 @@ class Senai {
 
 /* ===== OBTER ELEMENTOS ===== */
 
-const cidadeA = document.getElementsByClassName("unidadeA__cidade");
-const codigoA = document.getElementsByClassName("unidadeA__codigo");
-const anoA = document.getElementsByClassName("unidadeA__ano");
-const cursosA = document.getElementsByClassName("unidadeA__cursos");
+const cidadeA = document.querySelector(".unidadeA__cidade");
+const codigoA = document.querySelector(".unidadeA__codigo");
+const anoA = document.querySelector(".unidadeA__ano");
+const cursosA = document.querySelector(".unidadeA__cursos");
 
-const cidadeB = document.getElementsByClassName("unidadeB__cidade");
-const codigoB = document.getElementsByClassName("unidadeB__codigo");
-const anoB = document.getElementsByClassName("unidadeB__ano");
-const cursosB = document.getElementsByClassName("unidadeB__cursos");
+const cidadeB = document.querySelector(".unidadeB__cidade");
+const codigoB = document.querySelector(".unidadeB__codigo");
+const anoB = document.querySelector(".unidadeB__ano");
+const cursosB = document.querySelector(".unidadeB__cursos");
+
+const mensagem_unidades = document.querySelector("unidadeB__mensagem, unidadeA__mensagem");
+
+
 
 /* ===== FUNÇÃO DE VALIDAÇÃO ===== */
 
@@ -48,10 +52,14 @@ const cursosB = document.getElementsByClassName("unidadeB__cursos");
 /* ===== INSTANCIAR ESCOLA A ===== */
 
 const unidadeA = new Senai(codigoA, cidadeA, anoA, cursosA)
+function mostrarMensagem(mensagem) {
+  
+}
 
 /* ===== INSTANCIAR ESCOLA B ===== */
 
-const unidadeB = new Senai()
+const unidadeB = new Senai(codigoB, cidadeB, anoB, cursosB)
+
 
 
 /* ===== ABRIR ESCOLA ===== */
