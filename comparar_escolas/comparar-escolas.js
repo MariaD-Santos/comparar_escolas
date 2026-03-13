@@ -42,6 +42,7 @@ const anoB = document.querySelector(".unidadeB__ano");
 const cursosB = document.querySelector(".unidadeB__cursos");
 
 const mensagem_unidades = document.querySelector("unidadeB__mensagem, unidadeA__mensagem");
+const botoes = document.querySelectorAll("")
 
 
 
@@ -53,8 +54,8 @@ const mensagem_unidades = document.querySelector("unidadeB__mensagem, unidadeA__
 
 const unidadeA = new Senai(codigoA, cidadeA, anoA, cursosA)
 function mostrarMensagem(mensagem) {
-  
-}
+  mensagem_unidades.textContent = mensagem;
+};
 
 /* ===== INSTANCIAR ESCOLA B ===== */
 
@@ -78,7 +79,7 @@ unidadeB.fecharEscola();
 /* ===== NOVA CONSULTA ===== */
 
 function novaConsulta(){
-  dadosUnidades.style.display = 'none'
+  mensagem_unidades.style.display = 'none'
   unidadeA.value = ''
   unidadeB.value = ''
   unidadeA.focus();
